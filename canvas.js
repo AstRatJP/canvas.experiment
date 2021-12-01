@@ -4,8 +4,8 @@ canvas.height = window.innerHeight;
 const c = canvas.getContext("2d");
 
 
-const radius = innerHeight * 0.07;
-const h = innerHeight * 0.2;
+let radius = innerHeight * 0.07;
+let h = innerHeight * 0.2;
 let x = innerHeight * 0.1;
 let y = innerHeight * 0.2;
 let dx = innerHeight * 0.01;
@@ -42,6 +42,8 @@ function animate() {
     x += dx;
     y += dy;
     dy += 1;
+    radius = innerHeight * 0.07;
+    h = innerHeight * 0.2;
 
     // ボールの跳ね返り(横)
     if (x + radius > innerWidth || x - radius < 0) {
